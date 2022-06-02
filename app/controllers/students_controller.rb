@@ -19,10 +19,9 @@ class StudentsController < ApplicationController
   def edit
   end
 
-  # POST /students or /students.json
+  
   def create
     @student = Student.new(student_params)
-
     respond_to do |format|
       if @student.save
         format.html { redirect_to student_url(@student), notice: "Student was successfully created." }
@@ -34,7 +33,6 @@ class StudentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /students/1 or /students/1.json
   def update
     respond_to do |format|
       if @student.update(student_params)
@@ -47,7 +45,6 @@ class StudentsController < ApplicationController
     end
   end
 
-  # DELETE /students/1 or /students/1.json
   def destroy
     @student.destroy
 
@@ -58,12 +55,10 @@ class StudentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def student_params
       params.require(:student).permit(:name, :age, :city, :pincode)
     end
