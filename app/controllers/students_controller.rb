@@ -1,25 +1,24 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[ show edit update destroy ]
 
-  # GET /students or /students.json
   def index
     @students = Student.all
   end
 
-  # GET /students/1 or /students/1.json
   def show
   end
-
-  # GET /students/new
+  
   def new
     @student = Student.new
   end
 
-  # GET /students/1/edit
   def edit
   end
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 31e5881d2c3ea3d8a074d06182b692e362a01920
   def create
     @student = Student.new(student_params)
     respond_to do |format|
