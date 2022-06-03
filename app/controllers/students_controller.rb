@@ -15,9 +15,12 @@ class StudentsController < ApplicationController
   def edit
   end
 
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 31e5881d2c3ea3d8a074d06182b692e362a01920
   def create
     @student = Student.new(student_params)
-
     respond_to do |format|
       if @student.save
         format.html { redirect_to student_url(@student), notice: "Student was successfully created." }
